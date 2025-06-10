@@ -156,7 +156,7 @@ All parameters are optional. The API will accept any combination of the followin
   "status": "success",
   "data": {
     "uuid": "generated-uuid-here",
-    "redirectUrl": "auto.rainbowinsurance.com/profile/uuid=generated-uuid-here"
+    "redirectUrl": "auto.rainbowinsurance.com/profile?uuid=generated-uuid-here"
   },
   "message": "Form submission successful"
 }
@@ -182,4 +182,5 @@ All parameters are optional. The API will accept any combination of the followin
   - Source URL
   - Creation timestamp
   - Update timestamp
+
 # rainbow-post

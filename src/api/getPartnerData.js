@@ -1,6 +1,6 @@
-import supabase from '../util/supabase';
+const supabase = require('../util/supabase');
 
-export default async function handler(req, res) {
+async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     const { data, error } = await supabase
       .from('formSubmissions')
       .insert([enrichedData])
-      .select('uuid')
+      .select('uuid, userId')
       .single();
 
     if (error) {
@@ -32,19 +32,19 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'Failed to save form data' });
     }
 
-    // Construct the URL with the UUID
+    // Construct the URL with the userId
     const baseUrl = 'auto.rainbowinsurance.com/profile';
-    const formUrl = `${baseUrl}/uuid=${data.uuid}`;
+    const formUrl = `${baseUrl}?userId=${data.userId}`;
 
-    // Return the UUID and URL
+    // Return the userId and URL
     return res.status(200).json({
       code: 200,
       status: 'success',
       data: {
-        uuid: data.uuid,
+        userId: data.userId,
         redirectUrl: formUrl
       },
-      message: 'Form submission successful'
+      message: 'Form submission successful',
     });
 
   } catch (error) {
@@ -52,3 +52,5 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Internal server error' });
   }
 }
+
+module.exports = handler;
