@@ -5,7 +5,7 @@ This API handles form submissions for insurance applications, storing data in Su
 ## API Endpoint
 
 ```
-POST /api/submit
+POST https://rainbow-posting.onrender.com/api/submit
 ```
 
 ## Request Format
@@ -21,7 +21,7 @@ Content-Type: application/json
 ### Example Request
 
 ```bash
-curl -X POST http://localhost:3000/api/submit \
+curl -X POST https://rainbow-posting.onrender.com/api/submit \
   -H "Content-Type: application/json" \
   -d '{
     "firstName": "John",
@@ -155,8 +155,8 @@ All parameters are optional. The API will accept any combination of the followin
   "code": 200,
   "status": "success",
   "data": {
-    "uuid": "generated-uuid-here",
-    "redirectUrl": "auto.rainbowinsurance.com/profile?uuid=generated-uuid-here"
+    "uuid": "{{uuid}}",
+    "redirectUrl": "auto.rainbowinsurance.com/profile?uuid={{uuid}}"
   },
   "message": "Form submission successful"
 }
