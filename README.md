@@ -54,7 +54,7 @@ All parameters are optional. The API will accept any combination of the followin
 | ------------------------ | ------ | -------------------------- |
 | driverOneFirstName       | string | First name                 |
 | driverOneLastName        | string | Last name                  |
-| driverOneDOB             | date   | Date of birth (YYYY-MM-DD) |
+| driverOneDOB             | date   | Date of birth (MM-DD-YYYY) |
 | driverOneGender          | string | Gender                     |
 | driverOneResidence       | string | Residence type             |
 | driverOneYearAtResidence | string | Years at current residence |
@@ -68,7 +68,7 @@ All parameters are optional. The API will accept any combination of the followin
 | driverOneSuspended       | string | License suspension status  |
 | driverOneFilingRequired  | string | Filing requirements        |
 | driverOneDUI             | string | DUI status                 |
-| driverOneDUIDate         | date   | DUI date (YYYY-MM-DD)      |
+| driverOneDUIDate         | date   | DUI date (MM-DD-YYYY)      |
 | driverOneDUIState        | string | State where DUI occurred   |
 
 ### Driver Two Information
@@ -77,7 +77,7 @@ All parameters are optional. The API will accept any combination of the followin
 | ------------------------ | ------ | -------------------------- |
 | driverTwoFirstName       | string | First name                 |
 | driverTwoLastName        | string | Last name                  |
-| driverTwoDOB             | date   | Date of birth (YYYY-MM-DD) |
+| driverTwoDOB             | date   | Date of birth (MM-DD-YYYY) |
 | driverTwoGender          | string | Gender                     |
 | driverTwoResidence       | string | Residence type             |
 | driverTwoYearAtResidence | string | Years at current residence |
@@ -91,7 +91,7 @@ All parameters are optional. The API will accept any combination of the followin
 | driverTwoSuspended       | string | License suspension status  |
 | driverTwoFilingRequired  | string | Filing requirements        |
 | driverTwoDUI             | string | DUI status                 |
-| driverTwoDUIDate         | date   | DUI date (YYYY-MM-DD)      |
+| driverTwoDUIDate         | date   | DUI date (MM-DD-YYYY)      |
 | driverTwoDUIState        | string | State where DUI occurred   |
 
 ### Vehicle One Information
@@ -136,6 +136,8 @@ All parameters are optional. The API will accept any combination of the followin
 | bodily                | string | Bodily injury coverage     |
 | property              | string | Property damage coverage   |
 | requestedCoverageType | string | Requested coverage type    |
+| vehicleOneComprehensive | string | 
+| vehicleOneCollision | string |
 
 ### Additional Fields
 
